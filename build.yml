@@ -1,0 +1,4 @@
+- build: examples/1-demo-oled-wing-adafruit
+  argon: [latest]
+  boron: [latest]
+  xenon: [latest]
