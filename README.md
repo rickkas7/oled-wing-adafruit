@@ -3,7 +3,7 @@
 
 *Driver for Adafruit feather wing with SSD1306 oled and buttons*
 
-![board](oled.png)
+![board](oled.jpg)
 
 The [Adafruit OLED FeatherWing](https://www.adafruit.com/product/2900) has a 128x32 OLED display and 3 buttons. You can find more technical information [at Adafruit](https://learn.adafruit.com/adafruit-oled-featherwing/overview).
 
