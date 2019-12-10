@@ -77,6 +77,11 @@ OledWingAdafruit display;
 The display drawing commands use the [Adafruit GFX library](https://github.com/adafruit/Adafruit-GFX-Library), which supports text, graphics primitives (lines, circles, etc.) and bitmaps. The [example code](https://github.com/rickkas7/Adafruit_SSD1306_RK/blob/master/examples/simple/simple.ino) may be helpful.
 
 
+## Revision History
+
+#### 0.0.7 (2019-12-10)
+
+- Added mutex and lock methods for display usage on multiple threads
 
  
 

@@ -48,6 +48,28 @@ public:
 	 */
 	bool pressedC();
 
+	/**
+	 * @brief Optional mutex to make it easier to use the display from multiple threads
+	 *
+	 * Typical use:
+	 *
+	 * WITH_LOCK(display) {
+	 * 		// Code that uses the display
+	 * }
+	 */
+    void lock() { os_mutex_lock(mutex); };
+
+	/**
+	 * @brief Optional mutex to make it easier to use the display from multiple threads
+	 */
+    bool trylock() { return os_mutex_trylock(mutex)==0; };
+
+	/**
+	 * @brief Optional mutex to make it easier to use the display from multiple threads
+	 */
+    void unlock() { os_mutex_unlock(mutex); };
+
+
 	static const int USE_BUTTON_A 	= 0b001;
 	static const int USE_BUTTON_B 	= 0b010;
 	static const int USE_BUTTON_C 	= 0b100;
@@ -58,6 +80,7 @@ public:
 	static const int BUTTON_C_PIN = D2;
 
 private:
+	os_mutex_t mutex = 0;
 	int useButtons;
 	Debounce buttonA;
 	Debounce buttonB;

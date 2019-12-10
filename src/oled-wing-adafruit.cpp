@@ -5,10 +5,14 @@ OledWingAdafruit::OledWingAdafruit(int useButtons) : Adafruit_SSD1306(128, 32), 
 
 }
 OledWingAdafruit::~OledWingAdafruit() {
-
+	if (mutex) {
+		os_mutex_destroy(mutex);
+	}
 }
 
 void OledWingAdafruit::setup() {
+	os_mutex_create(&mutex);
+
 	if (useButtons & USE_BUTTON_A) {
 		buttonA.attach(BUTTON_A_PIN, INPUT_PULLUP);
 	}
