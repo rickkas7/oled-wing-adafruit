@@ -79,6 +79,10 @@ The display drawing commands use the [Adafruit GFX library](https://github.com/a
 
 ## Revision History
 
+### 0.0.8 (2020-12-18)
+
+- Upgraded to Adafruit_SSD1306_RK 1.3.2 to fix a compilation error with Device OS 2.0.0
+
 #### 0.0.7 (2019-12-10)
 
 - Added mutex and lock methods for display usage on multiple threads
